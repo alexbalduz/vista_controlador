@@ -7,8 +7,8 @@ class Database:
 
   app.config['MYSQL_HOST'] = '127.0.0.1'
   app.config['MYSQL_USER'] = 'root'
-  app.config['MYSQL_PASSWORD'] = 'oscarescamilla26'
-  app.config['MYSQL_DB'] = 'flask_crud'
+  app.config['MYSQL_PASSWORD'] = 'alexbalduz'
+  app.config['MYSQL_DB'] = 'flask'
   mysql = MySQL(app)
 
   def __init__(self):
