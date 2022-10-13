@@ -10,7 +10,6 @@ def login():
         return render_template('login.html')
     elif request.method == 'POST':
 
-        
         email = request.form['email']
         password = request.form['pass']
         mensaje = "el correo {0} y contraseña {1} son estos".format(email, password)

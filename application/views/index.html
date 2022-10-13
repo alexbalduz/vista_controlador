@@ -3,16 +3,14 @@
 {% block body %}
 <div class="row"> <h3>Contactos guardados en MySQL <i class="fas fa-database"></i></h3></div>
 <div class="row">
-  
+
     <div class="col-md-5">
         <!--mensajes de alerta-->
-       
-       
         {% with messages = get_flashed_messages() %} <!--guardamos en la variable messages los mensages guardados de flash-->
         {% if messages %}
             {% for message in messages%}
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>{{message}}</strong> 
+                        <strong>{{message}}</strong>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -21,7 +19,6 @@
         {% endif %}
         {% endwith %}
             <!--card del formulario-->
-            
         <div class="card card-body">
                 <form action="/add" method="POST">
                     <div class="form-group">
@@ -36,12 +33,11 @@
                     <div class="form-group">
                         <button type="submit" class="btn btn-dark btn-sm btn-block ">Save <i class="fas fa-check"></i></button>
                     </div>
-                    
-                </form> 
-        </div>   
+                </form>
+        </div>
     </div>
     <div class="col-md-7">
-        
+
         <!--tabla para mostrar todos los contacto-->
         <div class="card">
 
@@ -66,7 +62,7 @@
                         </td>
                     </tr>
                     {% endfor %}
-                </tbody>      
+                </tbody>
             </table>
         </div>
         </div>
@@ -74,8 +70,6 @@
 <hr>
 <div class="row"> <h3>Contactos guardados en MongoDB <i class="fas fa-database"></i></h3></div>
 <div class="row">
-    
-    
     <div class="col-md-12">
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-secondary btn-sm mb-3 mt-3" data-toggle="modal" data-target="#exampleModalCenter">
@@ -103,17 +97,17 @@
                         <div class="form-group">
                             <input class="form-control " type="text" name="telefono" placeholder="telefono...">
                         </div>
-                        
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-dark btn-sm">Save</button>
-                    </form> 
+                    </form>
                 </div>
             </div>
             </div>
         </div>
-        
+
         <!--tabla para mostrar todos los contacto-->
         <div class="card p-0">
 
@@ -142,13 +136,9 @@
                         </td>
                     </tr>
                     {% endfor %}
-                </tbody>      
+                </tbody>
             </table>
         </div>
         </div>
     </div>
-    
-    
-    
-    
     {% endblock %}

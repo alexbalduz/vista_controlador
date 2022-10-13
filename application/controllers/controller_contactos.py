@@ -8,7 +8,7 @@ from application.config.routes import urls
 model = Contactos()
 
 mdb = ConexionMongo().connect_mongo()
-# mdb = con_mongo.connect_mongo() 
+# mdb = con_mongo.connect_mongo()
 
 
 #route index
@@ -40,7 +40,7 @@ def add():
         except:
             flash('¡Ah ocurrido un error!')
             return redirect(url_for('index'))#redireciona al mismo index
-        
+
 
 @app.route(urls['delete.user'] , methods = ['GET'])
 def delete(id):
@@ -70,4 +70,3 @@ def update(id):
         print(contacto)
         return render_template('edit.html', contacto = contacto[0])
 
-    

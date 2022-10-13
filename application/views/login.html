@@ -2,7 +2,7 @@
 
 {% block body %}
 
- <!--mensajes de alerta-->
+<!--mensajes de alerta-->
 {% with messages = get_flashed_messages() %} <!--guardamos en la variable messages los mensages guardados de flash-->
 {% if messages %}
 {% for message in messages%}
@@ -20,9 +20,9 @@
 {% endif %}
 {% endwith %}
 <div class="row p-4">
-   
+
     <div class="col-md-4  mx-auto">
-         
+
         <div class="card">
             <div class="card-header bg-dark text-white">
                 <h3>Login</h3>

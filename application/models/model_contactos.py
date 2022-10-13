@@ -45,7 +45,6 @@ class Contactos():
         except:
             print('Error function det_by_id')
 
-            
     def update_contacto(self, id: int , nombre: str, telefono: int, email: str) -> int:
         try:
             cur = self.mysql.connection.cursor()
@@ -57,8 +56,3 @@ class Contactos():
             return cur.rowcount
         except:
             print('Error function update_contacto')
-            
-            
-
-
-        
