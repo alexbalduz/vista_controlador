@@ -2,7 +2,7 @@ import pymongo
 
 class ConexionMongo():
 
-    db_name = "agenda_oscar"
+    db_name = "agenda"
     db_URI = "mongodb://127.0.0.1:27017/"
 
     def __init__(self):
