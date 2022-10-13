@@ -17,7 +17,7 @@ def index():
     session['user'] = True
     if session['user']:
         collection = mdb["amigos"]
-        data = { "contactos" : model.get_contactos(), "amigos": collection.find() } 
+        data = { "contactos" : model.get_contactos(), "amigos": collection.find() }
         return render_template('index.html', data = data)
     else:
         return redirect(url_for('login'))
